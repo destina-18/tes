@@ -1,6 +1,19 @@
 //Driver Class
+import java.util.Scanner;
+
 public class SiswaTester {
     public static void main(String[] args) {
+        // Scanner input = new Scanner(System.in);
+        // System.out.println("Inputkan Nama Siswa:");
+        // String nama = input.nextLine();
+        // System.out.println("Inputkan Id Siswa:");
+        // int id = input.nextInt();
+        // System.out.println("Inputkan IPK:");
+        // double ipk = input.nextDouble();
+
+        // Siswa avelin = new Siswa(id, nama, ipk);
+        // avelin.print();
+        
         //object
         //Class object = new Constructor
         Siswa litha = new Siswa();
@@ -8,6 +21,14 @@ public class SiswaTester {
         Siswa lila = new Siswa();
         Siswa zea = new Siswa();
         Siswa nimas = new Siswa();
+        Siswa ima = new Siswa(123, "Fahrian", 80.5);
+
+        litha.print();
+        sasa.print();
+        lila.print();
+        zea.print();
+        nimas.print();
+        ima.print();
 
         litha.nama = "Talitha";
         litha.ipk = 90.0;
@@ -28,6 +49,21 @@ public class SiswaTester {
         nimas.nama = "nimasputu";
         nimas.ipk = 93.0;
         nimas.id = 30;
+        //2 kondisi --> nilai < 75 dannilai >=75
+        if (litha.getIpk() >= 75) {
+            System.out.println(litha.getNama() + "Lulus");
+        }else{
+            System.out.println("Tidak Lulus");
+        }
+
+        //3 kondisi
+        if (litha.getIpk() > 90) {
+            System.out.println("Excellent");
+        } else if (litha.getIpk() < 90 && litha.getIpk() >= 75) {
+            System.out.println("Great");
+        } else {
+            System.out.println("So Bad");
+        }
 
 
         System.out.println("Nama : "+ litha.nama);
@@ -49,5 +85,6 @@ public class SiswaTester {
         System.out.println("Nama : "+ nimas.nama);
         System.out.println("Absen : "+ nimas.id);
         System.out.println("Nilai : "+ nimas.ipk);
+        
     }
 }
